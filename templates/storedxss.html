@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stored</title>
+</head>
+<body>
+    {% if urls %}
+        {% for url in urls %}
+            <p>ID: {{ url.id }} URL: {{ url.url | safe }} Name: <a href="#" onclick="{{ url.name }}">Click</a></p>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
